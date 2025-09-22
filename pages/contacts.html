@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/contacts.css" />
     <title>Document</title>
   </head>
   <body>
@@ -23,6 +24,42 @@
     </header>
     <main>
       <!-- Тут писать-->
+       <main>
+  <section class="section-header">
+    <div>
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Fill out the form below or reach us directly.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <h3>Our Office</h3>
+      <p><strong>Phone:</strong> +7 777 777 77 77</p>
+      <p><strong>Email:</strong> info@travelx.com</p>
+      <p><strong>Address:</strong> Astana, Kazakhstan</p>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+  </section>
+</main>
     </main>
 
     <footer class="footer">
