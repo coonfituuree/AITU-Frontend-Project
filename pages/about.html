@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../globals.css">
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/about.css" />
@@ -10,53 +11,63 @@
   </head>
   <body>
     <header class="header">
-      <a href="./index.html" class="logo">
+      <a href="../index.html" class="logo">
         <img src="../assets/logo1.png" alt="logo" class="logo-img" />
       </a>
       <nav class="nav">
-        <a href="./pages/about.html">About</a>
-        <a href="./pages/destination.html">Destinations</a>
-        <a href="./pages/tours.html">Tours</a>
-        <a href="./pages/contacts.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="destination.html">Destinations</a>
+        <a href="tours.html">Tours</a>
+        <a href="contacts.html">Contact</a>
       </nav>
 
-      <a href="./pages/signup.html" class="btn">Sign Up</a>
+      <a href="signup.html" class="btn">Sign Up</a>
     </header>
     <main>
-      <!-- Тут писать-->
-       <div class="cards">
-        <div class="card left">
-          <img src="assets/ship.jpg" alt="Paris">
-          <h3>Ship</h3>
-          <p>Travelling with lux ship</p>
-        </div>
+  <section class="about-hero">
+    <h1>About TravelX</h1>
+    <p>
+      At TravelX, we believe that every journey is more than just moving from 
+      one place to another — it’s about creating unforgettable memories. 
+      Our mission is to connect people with breathtaking destinations, 
+      unique cultures, and once-in-a-lifetime adventures.
+    </p>
+  </section>
 
-        <div class="card right">
-          <img src="assets/bus.jpg" alt="London">
-          <h3>Bus</h3>
-          <p>Exploring city with bus</p>
-        </div>
-
-        <div class="card left">
-          <img src="assets/camel.jpg" alt="Rome">
-          <h3>Camels</h3>
-          <p>Rides on camel</p>
-        </div>
-
-        <div class="card right">
-          <img src="assets/drift.jpg" alt="Tokyo">
-          <h3>Shows</h3>
-          <p>Shows of drift cars</p>
-        </div>
+  <section class="about-values">
+    <h2>Why Choose TravelX?</h2>
+    <div class="cards">
+      <div class="card left">
+        <img src="../assets/ship.jpg" alt="Luxury Ship">
+        <h3>Luxury Cruises</h3>
+        <p>Enjoy unforgettable moments aboard our luxury ships, 
+        traveling across the world’s most stunning seas.</p>
       </div>
 
+      <div class="card right">
+        <img src="/assets/bus.jpg" alt="City Tours">
+        <h3>City Adventures</h3>
+        <p>Hop on our buses and discover the hidden gems, history, and 
+        vibrant streets of the world’s greatest cities.</p>
+      </div>
 
+      <div class="card left">
+        <img src="/assets/camel.jpeg" alt="Camel Rides">
+        <h3>Exotic Experiences</h3>
+        <p>Ride camels in deserts, explore ancient ruins, and 
+        dive into the heart of traditions.</p>
+      </div>
 
+      <div class="card right">
+        <img src="/assets/drift.jpg" alt="Entertainment Shows">
+        <h3>Unique Shows</h3>
+        <p>From thrilling drift shows to cultural performances, 
+        TravelX makes every trip extraordinary.</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-
-
-
-    </main>
 
     <footer class="footer">
       <div class="footer-container">
