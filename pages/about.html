@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../globals.css">
-    <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/about.css" />
-    <title>Document</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../globals.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/about.css">
+  <title>About</title>
+</head>
+<body>
+  <div class="layout">
     <header class="header">
       <a href="../index.html" class="logo">
-        <img src="../assets/logo1.png" alt="logo" class="logo-img" />
+        <img src="../assets/logo1.png" alt="logo" class="logo-img">
       </a>
       <nav class="nav">
         <a href="about.html">About</a>
@@ -20,56 +21,67 @@
         <a href="tours.html">Tours</a>
         <a href="contacts.html">Contact</a>
       </nav>
-
       <a href="signup.html" class="btn">Sign Up</a>
     </header>
- 
-    <main>
-       <div class="cards">
-        <div class="card left">
-          <img src="../assets/ship.jpg" alt="Paris">
+
+    <aside class="sidebar">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#">Company History</a></li>
+        <li><a href="#">Our Values</a></li>
+        <li><a href="#">Partners</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="cards">
+        <div class="card">
+          <img src="../assets/ship.jpg" alt="Ship">
           <h3>Ship</h3>
           <p>Travelling with lux ship</p>
+          <button>More</button>
         </div>
-
-      <div class="card right">
-        <img src="/assets/bus.jpg" alt="City Tours">
-        <h3>City Adventures</h3>
-        <p>Hop on our buses and discover the hidden gems, history, and 
-        vibrant streets of the world’s greatest cities.</p>
-      </div>
-
-      <div class="card left">
-        <img src="/assets/camel.jpeg" alt="Camel Rides">
-        <h3>Exotic Experiences</h3>
-        <p>Ride camels in deserts, explore ancient ruins, and 
-        dive into the heart of traditions.</p>
-      </div>
-
-        <div class="card right">
-          <img src="/assets/drift.jpg" alt="Tokyo">
+        <div class="card">
+          <img src="../assets/bus.jpg" alt="City Tours">
+          <h3>City Adventures</h3>
+          <p>Hop on our buses and discover hidden gems and vibrant streets.</p>
+          <button>More</button>
+        </div>
+        <div class="card">
+          <img src="../assets/camel.jpeg" alt="Camel Rides">
+          <h3>Exotic Experiences</h3>
+          <p>Ride camels, explore ruins, dive into traditions.</p>
+          <button>More</button>
+        </div>
+        <div class="card">
+          <img src="../assets/drift.jpg" alt="Tokyo">
           <h3>Shows</h3>
-          <p>Shows of drift cars</p>
+          <p>Adrenaline drift shows.</p>
+          <button>More</button>
         </div>
       </div>
 
-
-
-
-
-
-
+      <section class="gallery">
+        <img src="../assets/pic1.jpg" alt="">
+        <img src="../assets/pic2.jpg" alt="">
+        <img src="../assets/pic3.jpg" alt="">
+        <img src="../assets/pic4.jpg" alt="">
+        <img src="../assets/pic5.jpg" alt="">
+        <img src="../assets/pic6.jpg" alt="">
+        <img src="../assets/pic7.jpg" alt="">
+        <img src="../assets/pic8.jpg" alt="">
+        <img src="../assets/pic9.jpg" alt="">
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
-          <img src="../assets/logo1.png" alt="Logo" class="footer-logo" />
+          <img src="../assets/logo1.png" alt="Logo" class="footer-logo">
           <h3 class="footer-title">Contact Us</h3>
           <p class="footer-phone">+7 777 777 77 77</p>
           <p class="footer-time">from 9:00 am to 8:00 pm</p>
         </div>
-
         <div class="footer-col">
           <h3 class="footer-title">Authors</h3>
           <ul class="footer-list">
@@ -79,26 +91,23 @@
             <li>Haval Miras</li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h3 class="footer-title">About TravelX</h3>
           <ul class="footer-list">
             <li>About Company</li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h3 class="footer-title">Partners</h3>
           <ul class="footer-list">
             <li>Stark Industries</li>
             <li>Apple Corp.</li>
             <li>Wayne Enterprise</li>
-            <li></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">© TravelX. All rights reserved</div>
     </footer>
-  </body>
+  </div>
+</body>
 </html>
