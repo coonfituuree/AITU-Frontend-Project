@@ -12,14 +12,14 @@
   width: 300px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .card-img img {
@@ -33,7 +33,14 @@
 
 .card-text h3 {
   color: #007bff;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar {
+  margin-left: 1rem;
+  grid-area: sidebar;
+  padding: 1rem;
+  background: #f8f9fa;
 }
 
 .discount {

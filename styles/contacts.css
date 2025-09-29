@@ -18,7 +18,7 @@
   align-items: center;
   max-width: 800px;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 1rem;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -28,8 +28,9 @@
 .contact-info {
   display: flex;
   flex-direction: column;
+  text-align: left;
   gap: 10px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .contact-form {

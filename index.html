@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/globals.css">
+    <link rel="stylesheet" href="/globals.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/footer.css" />
     <title>Document</title>
   </head>
   <body>
@@ -24,62 +24,122 @@
       <a href="./pages/signup.html" class="btn">Sign Up</a>
     </header>
 
-    <main>
-      <section class="section-header">
-        <h2>Destinations</h2>
-        <a href="./pages/destination.html" class="see-all">See all</a>
-      </section>
+    <div class="layout">
+      <aside class="sidebar">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Popular Tours</a></li>
+          <li><a href="#">Best Deals</a></li>
+          <li><a href="#">Travel Tips</a></li>
+        </ul>
+      </aside>
 
-      <div class="cards limited">
-        <div class="card">
-          <img src="assets/paris.jpg" alt="Paris" />
-          <div class="card-content">
-            <h3>Paris</h3>
-            <p>The city of lights and romance.</p>
+      <main class="main">
+        <section class="section-header">
+          <h2>Top Destinations</h2>
+          <a href="./pages/destination.html" class="see-all">See all</a>
+        </section>
+
+        <div class="cards-grid">
+          <div class="card">
+            <img src="./assets/paris.jpg" alt="Paris" />
+            <div class="card-content">
+              <h3>Paris</h3>
+              <p>The city of lights and romance.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/tokyo.jpeg" alt="Tokyo" />
+            <div class="card-content">
+              <h3>Tokyo</h3>
+              <p>Modern culture meets tradition.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/newyork.webp" alt="New York" />
+            <div class="card-content">
+              <h3>New York</h3>
+              <p>The city that never sleeps.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/dubai.jpg" alt="Dubai" />
+            <div class="card-content">
+              <h3>Dubai</h3>
+              <p>Luxury in the desert.</p>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <img src="assets/tokyo.jpeg" alt="Tokyo" />
-          <div class="card-content">
-            <h3>Tokyo</h3>
-            <p>Modern culture meets tradition.</p>
+        <section class="section-header">
+          <h2>Popular Tours</h2>
+        </section>
+        <div class="cards-flex">
+          <div class="card">
+            <img src="./assets/safari.jpg" alt="Safari" />
+            <div class="card-content">
+              <h3>Safari</h3>
+              <p>Explore the desert with a guide.</p>
+              <a href="#" class="btn">Book Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/alps.avif" alt="Alps" />
+            <div class="card-content">
+              <h3>Alps</h3>
+              <p>Enjoy skiing in the mountains.</p>
+              <a href="#" class="btn">Book Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/adventure.jpg" alt="Safari" />
+            <div class="card-content">
+              <h3>Adventure</h3>
+              <p>Wildlife and unforgettable views.</p>
+              <a href="#" class="btn">Book Now</a>
+            </div>
           </div>
         </div>
 
-        <div class="card">
-          <img src="assets/newyork.webp" alt="New York" />
-          <div class="card-content">
-            <h3>New York</h3>
-            <p>The city that never sleeps.</p>
+        <section class="section-header">
+          <h2>Travel Moments</h2>
+        </section>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="./assets/gallery1.webp" alt="Gallery 1" />
+            <div class="caption">Mountain</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/gallery2.jpg" alt="Gallery 2" />
+            <div class="caption">Mountain Trek</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/gallery3.jpg" alt="Gallery 3" />
+            <div class="caption">Wassup Gaijin</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/gallery4.webp" alt="Gallery 4" />
+            <div class="caption">Look at this!</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/gallery5.webp" alt="Gallery 5" />
+            <div class="caption">Hello, You</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/gallery6.jpg" alt="Gallery 6" />
+            <div class="caption">Diving in liquor</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/gallery7.webp" alt="Gallery 7" />
+            <div class="caption">Gorilla check</div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/gallery8.webp" alt="Gallery 8" />
+            <div class="caption">There is my EGO</div>
           </div>
         </div>
-
-        <div class="card">
-          <img src="assets/dubai.jpg" alt="Dubai" />
-          <div class="card-content">
-            <h3>Dubai</h3>
-            <p>Luxury in the desert.</p>
-          </div>
-        </div>
-        
-        <div class="card">
-          <img src="assets/dest5.jpg" alt="Sydney" />
-          <div class="card-content">
-            <h3>Sydney</h3>
-            <p>Opera House and golden beaches.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="assets/dest6.jpg" alt="Rome" />
-          <div class="card-content">
-            <h3>Rome</h3>
-            <p>Ancient history and stunning cuisine.</p>
-          </div>
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <footer class="footer">
       <div class="footer-container">
