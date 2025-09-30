@@ -1,28 +1,27 @@
-/* styles/signup.css */
 
-.signup-section {
-  max-width: 400px;
+.signup-gallery {
+  display: flex;
+  flex-direction: column; 
+  gap: 2rem;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.section-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
 
-.section-header h2 {
-  font-size: 2rem;
-  color: #222;
+.signup-left {
+  flex: 1;
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  max-width: 400px;
 }
 
 .form-group {
@@ -58,17 +57,52 @@
   background: #005ecc;
 }
 
-.signup-section p {
-  margin-top: 1rem;
+
+.gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.gallery-item {
   text-align: center;
-  font-size: 0.9rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.signup-section a {
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.gallery h3 {
+  font-size: 1.2rem;
   color: #0077ff;
-  text-decoration: none;
+  margin-bottom: 0.5rem;
 }
 
-.signup-section a:hover {
-  text-decoration: underline;
+.gallery p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
 }
+
+/* Responsive (Mobile) */
+@media (min-width: 900px) {
+  .signup-gallery {
+    flex-direction: row; /
+  }
+}
+

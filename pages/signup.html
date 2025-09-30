@@ -24,37 +24,63 @@
       <a href="signup.html" class="btn">Sign Up</a>
     </header>
       
-    <main>
-      <!-- Тут писать-->    
-       <section class="section-header">
-      <h2>Create an Account</h2>
-    </section>
+    <main class="signup-gallery">
+  <!-- Сол жақ: форма -->
+  <div class="signup-left">
+    <h2>Create an Account</h2>
+    <p>Join TravelX and explore the world with us!</p>
 
-    <section class="signup-section">
-      <form class="signup-form">
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" placeholder="Enter your full name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Enter your email" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter your password" required />
-        </div>
-        <div class="form-group">
-          <label for="confirm">Confirm Password</label>
-          <input type="password" id="confirm" placeholder="Confirm your password" required />
-        </div>
-        <button type="submit" class="btn-submit">Sign Up</button>
-      </form>
-      <p>Already have an account? <a href="./signin.html">Sign In</a></p>
-    </section>
+    <form class="signup-form">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm">Confirm Password</label>
+        <input type="password" id="confirm" placeholder="Confirm your password" required />
+      </div>
+      <button type="submit" class="btn-submit">Sign Up</button>
+    </form>
+
+    <p class="signin-hint">
+      Already have an account? <a href="./signin.html">Sign In</a>
+    </p>
+  </div>
+
+  <!-- Оң жақ: суреттер галереясы -->
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="../assets/beachh.jpg" alt="Travel 1" />
+      <h3>Explore Beaches</h3>
+      <p>Relax on the most beautiful beaches worldwide.</p>
+    </div>
+    <div class="gallery-item">
+      <img src="../assets/city.jpg" alt="Travel 2" />
+      <h3>City Adventures</h3>
+      <p>Discover modern cities and ancient cultures.</p>
+    </div>
+    <div class="gallery-item">
+      <img src="../assets/mountain.jpg" alt="Travel 3" />
+      <h3>Mountain Hiking</h3>
+      <p>Challenge yourself with breathtaking hikes.</p>
+    </div>
+    <div class="gallery-item">
+      <img src="../assets/exotic.jpg" alt="Travel 4" />
+      <h3>Exotic Trips</h3>
+      <p>Travel to places you never imagined.</p>
+    </div>
+  </div>
+</main>
 
 
-    </main>
 
     <footer class="footer">
       <div class="footer-container">
