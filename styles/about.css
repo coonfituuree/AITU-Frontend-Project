@@ -16,7 +16,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  color: #fff;
+  color: #fff; 
 }
 
 .sidebar {
@@ -64,15 +64,13 @@
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
   gap: 1.5rem;
   justify-content: center;
 }
 
 .card {
-  flex: 1 1 250px;
-  max-width: 300px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
@@ -80,6 +78,7 @@
   padding: 1rem;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 
 .card:hover {
   transform: translateY(-5px);
@@ -109,5 +108,3 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
-
