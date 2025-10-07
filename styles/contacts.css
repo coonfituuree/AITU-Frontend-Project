@@ -57,7 +57,7 @@
 .gallery {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 баған */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 2rem;
 }
 

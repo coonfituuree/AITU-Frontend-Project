@@ -38,6 +38,12 @@
   gap: 1.5rem;
 }
 
+.cards .ncard{
+  grid-column: 3;
+  grid-row: 2;
+}
+
+
 .card {
   background: #fff;
   border-radius: 15px;
