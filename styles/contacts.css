@@ -1,103 +1,176 @@
-.contact-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 2rem;
+body {
+  background-color: #f8f9fb;
+  font-family: "Inter", sans-serif;
 }
 
-.contact-left {
-  flex: 1;
+main {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.contact-left h2 {
-  margin-bottom: 1rem;
+.page-title {
   color: #0077ff;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 1rem 0;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-form button {
-  padding: 0.8rem;
-  background: #0077ff;
-  color: #fff;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #005ecc;
-}
-
-.gallery {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 баған */
-  gap: 2rem;
-}
-
-.gallery-item {
-  text-align: center;
+/* ===== INFO BOXES ===== */
+.info-box {
   background: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.gallery-item:hover {
+.info-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
-
-.gallery img {
-  width: 100%;
-  height: 200px;       
-  object-fit: cover;   
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.gallery h3 {
-  font-size: 1.2rem;
+.info-box h5 {
   color: #0077ff;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
+.info-box p {
+  color: #444;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6;
+}
 
-.gallery p {
-  font-size: 0.95rem;
+/* ===== CONTACT DETAILS ===== */
+.contact-details div {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== GALLERY ===== */
+.gallery-section .card {
+  border: none;
+  border-radius: 1rem;
+  background: #fdfdfd;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+.gallery-section .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.gallery-section .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.gallery-section .card-body {
+  background: #f9fafc;
+  border-top: 1px solid #eee;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.gallery-section .card-body h5 {
+  color: #0077ff;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.gallery-section .card-body p {
   color: #555;
+  font-size: 0.95rem;
   margin: 0;
 }
 
-@media (min-width: 900px) {
-  .contact-gallery {
-    flex-direction: row;
-    align-items: flex-start;
+/* ===== CONTACT FORM ===== */
+.contact-form-section {
+  margin-top: 3rem;
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+.contact-form-section h3 {
+  color: #0077ff;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+.btn-primary {
+  background-color: #0077ff;
+  border-color: #0077ff;
+  font-weight: 500;
+  padding: 0.75rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #005ecc;
+  border-color: #005ecc;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.3);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #1f2225;
+  color: #e0e0e0;
+  padding: 3rem 0 1.5rem 0;
+}
+.footer-logo {
+  width: 55px;
+  margin-bottom: 0.5rem;
+}
+.footer-title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+.footer-phone,
+.footer-time {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-list li {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.footer-list li:hover {
+  color: #0077ff;
+  transition: color 0.3s ease;
+}
+.footer-line {
+  border: none;
+  border-top: 1px solid #3a3a3a;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer-bottom {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .gallery-section .card-img-top {
+    height: 170px;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 0 auto 0.5rem;
   }
 }
