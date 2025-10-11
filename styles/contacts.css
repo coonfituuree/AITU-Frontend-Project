@@ -174,3 +174,8 @@ main {
     margin: 0 auto 0.5rem;
   }
 }
+@media (max-width:576px){
+  body{
+    background-color: #fff;
+  }
+}
