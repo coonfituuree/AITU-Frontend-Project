@@ -5,13 +5,14 @@
   padding: 1rem 2rem 2rem 2rem;
 }
 
-.card {
+a.card {
   background: #fff;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  text-decoration: none;
 }
 
 .card.g2{
@@ -31,7 +32,7 @@
 }
 
 .card-content {
-  padding: 1rem;
+  padding-top: 1rem;
   text-align: center;
 }
 
@@ -40,11 +41,13 @@
   font-size: 1.3rem;
   font-weight: 600;
   color: #333;
+  text-decoration: none;
 }
 
 .card p {
   font-size: 0.95rem;
   color: #666;
+  text-decoration: none;
 }
 
 

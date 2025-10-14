@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../globals.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Las Vegas F1 Grand Prix</title>
+    <style>
+      /* === Hero Section === */
+      .hero {
+        padding: 6rem 2rem 3rem;
+        text-align: center;
+        background: linear-gradient(135deg, #000000, #8b0000, #ffd700);
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(255, 215, 0, 0.1) 10px,
+          rgba(255, 215, 0, 0.1) 20px
+        );
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        position: relative;
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.5),
+          2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: neonGlow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes neonGlow {
+        from {
+          text-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+            2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        to {
+          text-shadow: 0 0 30px rgba(255, 215, 0, 0.8),
+            0 0 40px rgba(255, 215, 0, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      /* === Carousel === */
+      .carousel {
+        max-width: 900px;
+        margin: 3rem auto;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .carousel img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+
+      /* === Offer Section === */
+      .offer-section {
+        padding: 4rem 2rem;
+        background: linear-gradient(to bottom, #1a1a1a, #000000);
+      }
+
+      .offer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .offer-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #ffd700, #ffa500, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      @keyframes shimmer {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .offer-subtitle {
+        text-align: center;
+        font-size: 1.3rem;
+        color: #ffd700;
+        margin-bottom: 3rem;
+      }
+
+      .vegas-package {
+        background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        border-radius: 1.5rem;
+        padding: 3rem;
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.3),
+          0 10px 40px rgba(0, 0, 0, 0.5);
+        margin-bottom: 3rem;
+        border: 2px solid #ffd700;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .vegas-package::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(255, 215, 0, 0.03) 10px,
+          rgba(255, 215, 0, 0.03) 20px
+        );
+        animation: moveStripes 20s linear infinite;
+      }
+
+      @keyframes moveStripes {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(50px, 50px);
+        }
+      }
+
+      .package-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .package-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffd700;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      }
+
+      .package-price {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #ffd700;
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+      }
+
+      .package-duration {
+        color: #aaa;
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+      }
+
+      .package-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .feature-box {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        border: 1px solid #ffd700;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+      }
+
+      .feature-box h4 {
+        color: #ffd700;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      .feature-box ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .feature-box li {
+        padding: 0.5rem 0;
+        color: #ccc;
+      }
+
+      .feature-box li::before {
+        content: "🎰";
+        margin-right: 0.5rem;
+      }
+
+      .vegas-highlights {
+        background: linear-gradient(135deg, #8b0000, #000000);
+        color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem 0;
+        position: relative;
+        z-index: 1;
+        border: 1px solid #ffd700;
+      }
+
+      .highlights-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #ffd700;
+        text-align: center;
+      }
+
+      .highlights-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .highlight-item {
+        text-align: center;
+        padding: 1rem;
+        background: rgba(255, 215, 0, 0.1);
+        border-radius: 0.5rem;
+        border: 1px solid rgba(255, 215, 0, 0.3);
+      }
+
+      .highlight-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .highlight-text {
+        font-size: 0.9rem;
+        color: #ffd700;
+      }
+
+      .cta-button {
+        display: block;
+        margin: 2rem auto;
+        padding: 1.2rem 3rem;
+        background: linear-gradient(135deg, #ffd700, #ffa500);
+        color: #000000;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        text-align: center;
+        max-width: 400px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.8),
+          0 10px 30px rgba(255, 165, 0, 0.5);
+        color: #000000;
+      }
+
+      .info-badge {
+        background: linear-gradient(135deg, #8b0000, #dc143c);
+        color: #ffd700;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        border: 2px solid #ffd700;
+        position: relative;
+        z-index: 1;
+      }
+
+      .info-badge h4 {
+        color: #ffd700;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .info-badge p {
+        margin: 0.5rem 0;
+        color: #fff;
+      }
+
+      /* === Footer === */
+      .footer {
+        background: #000000;
+        color: #bbb;
+        padding: 3rem 2rem 1rem;
+        border-top: 2px solid #ffd700;
+      }
+
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-title {
+        color: #ffd700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-list li {
+        margin: 0.5rem 0;
+        transition: color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .footer-list li:hover {
+        color: #ffd700;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid #333;
+        padding-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #ffd700, #ffa500);
+        color: #000 !important;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      }
+
+      .btn:hover {
+        background: linear-gradient(135deg, #ffa500, #ffd700);
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .offer-title {
+          font-size: 2.5rem;
+        }
+
+        .package-title {
+          font-size: 2rem;
+        }
+
+        .package-price {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- === Header === -->
+    <header class="header">
+      <a href="/index.html" class="logo">
+        <img src="/assets/logo1.png" alt="logo" class="logo-img" />
+      </a>
+      <nav class="nav">
+        <a href="../about.html">About</a>
+        <a href="../destination.html">Destinations</a>
+        <a href="../tours.html">Tours</a>
+        <a href="../contacts.html">Contact</a>
+      </nav>
+      <a href="../signup.html" class="btn">Sign Up</a>
+    </header>
+
+    <!-- === Hero Section === -->
+    <section class="hero">
+      <h1>🎰 Las Vegas Grand Prix 🏁</h1>
+      <p>
+        Experience the most electrifying race on the F1 calendar! High-speed
+        action on the iconic Las Vegas Strip under the dazzling neon lights.
+        Where luxury meets velocity!
+      </p>
+    </section>
+      <div
+        class="text-center"
+        style="font-size: 50px; margin-top: 2rem; color: #ffd700"
+      >
+        Gallery
+      </div>
+      <div class="text-center" style="font-size: 25px; color: #ccc">
+        The Strip. The Speed. The Spectacle.
+      </div>
+      <!-- === Carousel === -->
+      <div id="carouselExample" class="carousel slide" style="background: #000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/assets/LasVegas/3.webp"
+              class="d-block"
+              alt="Las Vegas Strip"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/LasVegas/2.webp"
+              class="d-block"
+              alt="Vegas at night"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/Dubai/3.webp"
+              class="d-block"
+              alt="F1 on the strip"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>  
+
+    <!-- === Offer Section === -->
+    <section class="offer-section">
+      <div class="offer-container">
+        <h2 class="offer-title">✨ VEGAS F1 EXPERIENCE ✨</h2>
+        <p class="offer-subtitle">The Ultimate Sin City Racing Adventure</p>
+
+        <div class="vegas-package">
+          <div class="package-header">
+            <h3 class="package-title">🎲 All-In Vegas F1 Package</h3>
+            <div class="package-price">$5,999</div>
+            <div class="package-duration">per person | 5 Days / 4 Nights</div>
+          </div>
+
+          < class="vegas-highlights">
+            <div class="highlights-title">🌟 What Makes Vegas F1 Special</div>
+            <div class="highlights-grid">
+              <div class="highlight-item">
+                <div class="highlight-icon">🏙️</div>
+                <div class="highlight-text">Race on the actual Strip!</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🌃</div>
+                <div class="highlight-text">Saturday Night Race</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🎰</div>
+                <div class="highlight-text">World-class casinos</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🎭</div>
+                <div class="highlight-text">Celebrity performances</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🍾</div>
+                <div class="highlight-text">VIP nightlife access</div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">⚡</div>
+                <div class="highlight-text">350+ km/h speeds</div>
+              </div>
+            </div>
+          
+
+          <div class="package-content">
+            <div class="feature-box">
+              <h4>🏨 Luxury Strip Accommodation</h4>
+              <ul>
+                <li>4 nights at Bellagio/Wynn</li>
+                <li>Track-view suite upgrade</li>
+                <li>Daily breakfast buffet</li>
+                <li>Casino gaming credits</li>
+                <li>Pool & spa access</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <h4>🏁 Premium Race Access</h4>
+              <ul>
+                <li>Grandstand tickets - Turn 1</li>
+                <li>All practice sessions</li>
+                <li>Qualifying & Race day</li>
+                <li>Paddock Club hospitality</li>
+                <li>Post-race celebration access</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <h4>🎉 Vegas VIP Experiences</h4>
+              <ul>
+                <li>Welcome champagne reception</li>
+                <li>Exclusive nightclub entry</li>
+                <li>Cirque du Soleil show tickets</li>
+                <li>Private helicopter Strip tour</li>
+                <li>High Roller observation wheel</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <h4>🚗 Transportation & Extras</h4>
+              <ul>
+                <li>Airport limousine transfers</li>
+                <li>Race weekend shuttle pass</li>
+                <li>F1 merchandise voucher</li>
+                <li>Meet & greet opportunities</li>
+                <li>Official race program</li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="#" class="cta-button">🎰 BOOK YOUR VEGAS F1 ADVENTURE</a>
+
+          <div class="info-badge">
+            <h4>🎲 The Vegas F1 Difference</h4>
+            <p>
+              🏙️ <strong>Unique Street Circuit:</strong> Racing through the
+              heart of Las Vegas Strip at night - past iconic casinos,
+              fountains, and neon lights!
+            </p>
+            <p>
+              🌡️ <strong>Perfect November Weather:</strong> Comfortable 15-20°C
+              temperatures for outdoor spectating
+            </p>
+            <p>
+              🎭 <strong>Entertainment Capital:</strong> World-class shows,
+              restaurants, and nightlife before and after the race
+            </p>
+            <p>📞 <strong>24/7 Support:</strong> +7 777 777 77 77</p>
+            <p>
+              💳 <strong>Payment Options:</strong> Flexible installments
+              available | Full refund protection
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(135deg, #1a1a1a, #000);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 2px solid #ffd700;
+            text-align: center;
+          "
+        >
+          <h4 style="color: #ffd700; margin-bottom: 1rem; font-size: 1.8rem">
+            💎 Why Las Vegas Grand Prix?
+          </h4>
+          <p style="color: #fff; font-size: 1.1rem; line-height: 1.8">
+            The Las Vegas GP is F1's crown jewel - a Saturday night street race
+            down the most famous boulevard in the world! Watch F1 cars rocket
+            past the Bellagio fountains, navigate around Caesars Palace, and
+            accelerate down the Strip at over 350 km/h. This isn't just a
+            race—it's a 3-day festival of speed, luxury, and non-stop
+            entertainment. With our package, you'll live like a Vegas high
+            roller while witnessing F1 history!
+          </p>
+          <p style="color: #ffd700; font-size: 1rem; margin-top: 1rem">
+            ⚠️ Limited availability - Vegas F1 sells out fast! Only 75 packages
+            remaining at this price.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === Footer === -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <img src="/assets/logo1.png" alt="Logo" class="footer-logo" />
+          <h3 class="footer-title">Contact Us</h3>
+          <p class="footer-phone" style="color: #ffd700">+7 777 777 77 77</p>
+          <p class="footer-time" style="color: #ccc">from 9:00 am to 8:00 pm</p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Authors</h3>
+          <ul class="footer-list">
+            <li>Bartay Galym</li>
+            <li>Rauan Ali</li>
+            <li>Mukhtaruly Nurrasyl</li>
+            <li>Haval Miras</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">About TravelX</h3>
+          <ul class="footer-list">
+            <li>About Company</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-title">Partners</h3>
+          <ul class="footer-list">
+            <li>Stark Industries</li>
+            <li>Apple Corp.</li>
+            <li>Wayne Enterprise</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© TravelX. All rights reserved</div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
