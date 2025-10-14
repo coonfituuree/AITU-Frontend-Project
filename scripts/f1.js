@@ -1,13 +1,13 @@
 // Task 1: F1 Form Validation
 console.log("Works");
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form"); // твоя форма бронирования
+  const form = document.querySelector("form");
   const errorBox = document.createElement("div");
   errorBox.classList.add("alert", "alert-danger", "mt-3", "d-none");
   form.appendChild(errorBox);
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // предотвратить стандартную отправку
+    e.preventDefault();
 
     const firstName = document.getElementById("firstName").value.trim();
     const lastName = document.getElementById("lastName").value.trim();
@@ -74,15 +74,11 @@ const headers = document.querySelectorAll(".accordion-header");
 headers.forEach((header) => {
   header.addEventListener("click", () => {
     const accordionItem = header.parentElement;
-
-    // Закрыть другие аккордеоны (опционально)
     document.querySelectorAll(".accordion-item").forEach((item) => {
       if (item !== accordionItem) {
         item.classList.remove("active");
       }
     });
-
-    // Переключить текущий
     accordionItem.classList.toggle("active");
   });
 });
@@ -90,25 +86,21 @@ headers.forEach((header) => {
 // ============================
 // Task 3: Popup Subscription
 // ============================
-// JavaScript для Popup
 const openPopupBtn = document.getElementById("openPopup");
 const closePopupBtn = document.getElementById("closePopup");
 const popup = document.getElementById("popup");
 const popupForm = document.getElementById("popupForm");
 
-// Открыть popup
 openPopupBtn.addEventListener("click", () => {
   popup.classList.add("show");
-  document.body.style.overflow = "hidden"; // Блокируем скролл
+  document.body.style.overflow = "hidden";
 });
 
-// Закрыть popup по клику на крестик
 closePopupBtn.addEventListener("click", () => {
   popup.classList.remove("show");
-  document.body.style.overflow = "auto"; // Разблокируем скролл
+  document.body.style.overflow = "auto"
 });
 
-// Закрыть popup по клику вне контента
 popup.addEventListener("click", (e) => {
   if (e.target === popup) {
     popup.classList.remove("show");
@@ -116,21 +108,18 @@ popup.addEventListener("click", (e) => {
   }
 });
 
-// Обработка формы
 popupForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.getElementById("popupEmail").value;
 
-  // Здесь можно добавить отправку данных
   alert(`Subscribed with email: ${email}`);
 
-  // Закрыть popup после подписки
+
   popup.classList.remove("show");
   document.body.style.overflow = "auto";
   popupForm.reset();
 });
 
-// Закрыть по ESC
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && popup.classList.contains("show")) {
     popup.classList.remove("show");
