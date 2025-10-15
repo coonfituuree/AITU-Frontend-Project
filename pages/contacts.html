@@ -14,6 +14,103 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/contacts.css" />
+
+    <!-- Extra Styles -->
+    <style>
+      /* Clock and Search */
+      #datetime {
+        font-size: 18px;
+        color: #1e293b;
+        font-weight: 600;
+      }
+
+      #serviceForm {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 5px;
+      }
+
+      #serviceInput {
+        border: 2px solid #3b82f6;
+        border-radius: 8px;
+        padding: 8px 12px;
+        outline: none;
+        width: 250px;
+        transition: 0.3s;
+      }
+
+      #serviceInput:focus {
+        box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+        border-color: #2563eb;
+      }
+
+      #serviceForm button {
+        background-color: #3b82f6;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        color: white;
+        font-weight: 500;
+      }
+
+      #serviceForm button:hover {
+        background-color: #2563eb;
+      }
+
+      /* Accordion */
+      .accordion-question {
+        cursor: pointer;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        transition: background 0.3s;
+      }
+
+      .accordion-question:hover {
+        background: #e9ecef;
+      }
+
+      .accordion-answer {
+        display: none;
+        padding: 15px;
+        border-left: 3px solid #0d6efd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background: #fff;
+      }
+
+      /* Popup */
+      .popup {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .popup-content {
+        background: #fff;
+        margin: 10% auto;
+        padding: 25px;
+        border-radius: 10px;
+        max-width: 400px;
+        position: relative;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 22px;
+        cursor: pointer;
+      }
+    </style>
   </head>
 
   <body>
@@ -45,9 +142,28 @@
 
     <!-- ===== MAIN ===== -->
     <main class="container py-5">
-      <h2 class="page-title text-center">Get in Touch</h2>
+      <h2 class="page-title text-center mb-4">Get in Touch</h2>
 
-      <!-- Top Info Boxes -->
+      <!-- === CLOCK + SEARCH + COLOR BUTTON === -->
+      <div class="d-flex align-items-start justify-content-between my-4">
+        <div>
+          <p id="datetime" class="mb-2"></p>
+          <h5 class="fw-semibold">If you have any questions:</h5>
+          <form id="serviceForm">
+            <input
+              type="text"
+              id="serviceInput"
+              placeholder="Search what you want"
+              required
+            />
+            <button type="submit">OK</button>
+          </form>
+        </div>
+
+        <button id="colorBtn" class="btn btn-warning mt-4">🎨 Change Background</button>
+      </div>
+
+      <!-- === TOP INFO BOXES === -->
       <div class="row text-center mb-4">
         <div class="col-md-6 info-box">
           <h5>Office Information</h5>
@@ -65,14 +181,7 @@
         </div>
       </div>
 
-      <!-- Contact Details -->
-      <div class="row text-center mb-5 contact-details">
-        <div class="col-md-4"><strong>Email:</strong> info@travelx.com</div>
-        <div class="col-md-4"><strong>Phone:</strong> +7 777 777 77 77</div>
-        <div class="col-md-4"><strong>Address:</strong> Astana, Kazakhstan</div>
-      </div>
-
-      <!-- Gallery Section -->
+      <!-- === GALLERY === -->
       <section class="gallery-section mb-5">
         <div class="row g-4">
           <div class="col-lg-3 col-sm-6">
@@ -117,86 +226,92 @@
         </div>
       </section>
 
-      <!-- Contact Form -->
+      <!-- === FAQ (ACCORDION) === -->
+      <section class="mb-5">
+        <h3 class="text-center mb-3">Frequently Asked Questions</h3>
+
+        <div class="accordion-question">What services does TravelX offer?</div>
+        <div class="accordion-answer">
+          We provide tours, hotel booking, and travel planning for individuals and groups.
+        </div>
+
+        <div class="accordion-question">Can I cancel or reschedule my booking?</div>
+        <div class="accordion-answer">
+          Yes, we help with cancellations and rescheduling according to partner policies.
+        </div>
+
+        <div class="accordion-question">Do you offer group or student discounts?</div>
+        <div class="accordion-answer">
+          Yes! We have discounts for families, students, and corporate clients.
+        </div>
+      </section>
+
+      <!-- === CONTACT FORM === -->
       <section class="contact-form-section">
-        <h3 class="text-center">Send Us a Message</h3>
+        <h3 class="text-center mb-3">Send Us a Message</h3>
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <form>
+            <form id="contactForm">
               <div class="mb-3">
                 <label for="name" class="form-label">Full Name</label>
-                <input type="text" id="name" class="form-control" placeholder="Enter your name" required />
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Enter your name"
+                  required
+                />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter your email" required />
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Enter your email"
+                  required
+                />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea id="message" rows="5" class="form-control" placeholder="Write your message..." required></textarea>
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="form-control"
+                  placeholder="Write your message..."
+                  required
+                ></textarea>
               </div>
               <button type="submit" class="btn btn-primary w-100">Send Message</button>
             </form>
           </div>
         </div>
       </section>
+
+      <!-- === POPUP FORM === -->
+      <div class="text-center mt-5">
+        <button id="openPopup" class="btn btn-success">💌 Subscribe</button>
+      </div>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close-btn" id="closePopup">&times;</span>
+          <h4 class="mb-3 text-center">Subscribe to Our Newsletter</h4>
+          <input type="email" class="form-control mb-3" placeholder="Enter your email" />
+          <button class="btn btn-primary w-100">Subscribe</button>
+        </div>
+      </div>
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <div class="container">
-        <div class="row gy-4 footer-top">
-          <!-- Contact Info -->
-          <div class="col-md-3">
-            <img src="../assets/logo1.png" alt="Logo" class="footer-logo mb-2" />
-            <h5 class="footer-title">Contact Us</h5>
-            <p class="footer-phone">+7 777 777 77 77</p>
-            <p class="footer-time">from 9:00 am to 8:00 pm</p>
-          </div>
-
-          <!-- Authors -->
-          <div class="col-md-3">
-            <h5 class="footer-title">Authors</h5>
-            <ul class="footer-list">
-              <li>Bartay Galym</li>
-              <li>Rauan Ali</li>
-              <li>Mukhtaruly Nurrasyl</li>
-              <li>Miras Haval</li>
-            </ul>
-          </div>
-
-          <!-- About -->
-          <div class="col-md-3">
-            <h5 class="footer-title">About TravelX</h5>
-            <ul class="footer-list">
-              <li>About Company</li>
-            </ul>
-          </div>
-
-          <!-- Partners -->
-          <div class="col-md-3">
-            <h5 class="footer-title">Partners</h5>
-            <ul class="footer-list">
-              <li>Stark Industries</li>
-              <li>Apple Corp.</li>
-              <li>Wayne Enterprises</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="footer-line" />
-
-        <div class="text-center footer-bottom">
-          © 2025 TravelX. All rights reserved
-        </div>
+    <footer class="footer bg-light py-4 mt-5">
+      <div class="container text-center">
+        <p>© 2025 TravelX. All rights reserved.</p>
+        <p>Team: Bartay Galym | Rauan Ali | Mukhtaruly Nurrasyl | Miras Haval</p>
       </div>
     </footer>
 
-
-
-    <button type="button"  bt-alert-danger>   gg</button> 
-
-
-
+    <!-- JS -->
+    <script src="../scripts/contact.js"></script>
   </body>
-</html> 
+</html>
