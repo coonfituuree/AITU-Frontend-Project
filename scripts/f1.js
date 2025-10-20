@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       errorBox.classList.add("d-none");
       alert("✅ Your booking form was successfully submitted!");
+      prompt("Enter your name:" + firstName);
       form.reset();
     }
   });
@@ -114,7 +115,6 @@ popupForm.addEventListener("submit", (e) => {
 
   alert(`Subscribed with email: ${email}`);
 
-
   popup.classList.remove("show");
   document.body.style.overflow = "auto";
   popupForm.reset();
@@ -167,3 +167,7 @@ function updateDateTime() {
 
 updateDateTime();
 setInterval(updateDateTime, 1000);
+
+
+
+const name = getElementById("name");

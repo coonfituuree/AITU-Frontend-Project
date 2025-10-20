@@ -23,7 +23,7 @@
       }
 
       .hero::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -38,7 +38,7 @@
         font-weight: 700;
         margin-bottom: 1rem;
         position: relative;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
       .hero p {
@@ -168,7 +168,7 @@
       }
 
       .feature-box li::before {
-        content: '✓';
+        content: "✓";
         color: #e10600;
         font-weight: bold;
         margin-right: 0.5rem;
@@ -253,15 +253,15 @@
         .hero h1 {
           font-size: 2.5rem;
         }
-        
+
         .offer-title {
           font-size: 2.5rem;
         }
-        
+
         .package-title {
           font-size: 2rem;
         }
-        
+
         .package-price {
           font-size: 2rem;
         }
@@ -272,11 +272,7 @@
     <!-- === Header === -->
     <header class="header">
       <a href="/index.html" class="logo">
-        <img
-          src="/assets/logo1.png"
-          alt="logo"
-          class="logo-img"
-        />
+        <img src="/assets/logo1.png" alt="logo" class="logo-img" />
       </a>
       <nav class="nav">
         <a href="../about.html">About</a>
@@ -291,12 +287,18 @@
     <section class="hero">
       <h1>🏁 Dubai Formula 1 Grand Prix</h1>
       <p>
-        Feel the adrenaline rush at the Abu Dhabi Grand Prix! Experience the ultimate blend of luxury, speed, and Middle Eastern hospitality at one of F1's most iconic night races.
+        Feel the adrenaline rush at the Abu Dhabi Grand Prix! Experience the
+        ultimate blend of luxury, speed, and Middle Eastern hospitality at one
+        of F1's most iconic night races.
       </p>
     </section>
 
-    <div class="text-center" style="font-size: 50px; margin-top: 2rem;">Gallery</div>
-    <div class="text-center" style="font-size:25px;">Witness the Speed and Glory</div>
+    <div class="text-center" style="font-size: 50px; margin-top: 2rem">
+      Gallery
+    </div>
+    <div class="text-center" style="font-size: 25px">
+      Witness the Speed and Glory
+    </div>
     <!-- === Carousel === -->
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
@@ -332,7 +334,9 @@
     <section class="special-offer">
       <div class="offer-container">
         <h2 class="offer-title">🏆 SPECIAL F1 PACKAGE</h2>
-        <p class="offer-subtitle">Limited Time Offer - Book Your Ultimate Racing Experience</p>
+        <p class="offer-subtitle">
+          Limited Time Offer - Book Your Ultimate Racing Experience
+        </p>
 
         <div class="countdown">
           <div class="countdown-title">⏰ Offer Ends In:</div>
@@ -407,31 +411,322 @@
           </div>
 
           <a href="#" class="cta-button">🏎️ BOOK NOW - LIMITED SPOTS!</a>
-          
-          <div style="text-align: center; margin-top: 2rem; color: #666;">
+
+          <div style="text-align: center; margin-top: 2rem; color: #666">
             <p>📞 24/7 Customer Support: +7 777 777 77 77</p>
-            <p>💳 Flexible payment plans available | 🛡️ Full refund if event cancelled</p>
+            <p>
+              💳 Flexible payment plans available | 🛡️ Full refund if event
+              cancelled
+            </p>
           </div>
         </div>
 
-        <div style="background: #fff3cd; padding: 2rem; border-radius: 1rem; border-left: 5px solid #ffc107; margin-top: 2rem;">
-          <h4 style="color: #856404; margin-bottom: 1rem;">⚡ Why Book This Package?</h4>
-          <p style="color: #856404; margin: 0;">
-            The Abu Dhabi GP at Yas Marina Circuit is F1's season finale under the lights! This isn't just a race - it's a spectacle of speed, technology, and luxury. With our VIP package, you'll experience Dubai's iconic landmarks AND witness history being made on the track. Only 50 packages available at this price!
+        <div
+          style="
+            background: #fff3cd;
+            padding: 2rem;
+            border-radius: 1rem;
+            border-left: 5px solid #ffc107;
+            margin-top: 2rem;
+          "
+        >
+          <h4 style="color: #856404; margin-bottom: 1rem">
+            ⚡ Why Book This Package?
+          </h4>
+          <p style="color: #856404; margin: 0">
+            The Abu Dhabi GP at Yas Marina Circuit is F1's season finale under
+            the lights! This isn't just a race - it's a spectacle of speed,
+            technology, and luxury. With our VIP package, you'll experience
+            Dubai's iconic landmarks AND witness history being made on the
+            track. Only 50 packages available at this price!
           </p>
         </div>
       </div>
+    </section>
+
+    <section
+      id="rate"
+      class="interactive-section"
+      style="
+        padding: 3rem;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          #e10600 0%,
+          #1a1a1a 50%,
+          #000000 100%
+        );
+        position: relative;
+        overflow: hidden;
+        border: 3px solid #e10600;
+        box-shadow: 0 0 30px rgba(225, 6, 0, 0.5),
+          inset 0 0 50px rgba(0, 0, 0, 0.8);
+      "
+    >
+      <h2
+        style="
+          color: #ffffff;
+          font-family: 'Arial Black', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          text-shadow: 0 0 10px #e10600, 0 0 20px #e10600, 2px 2px 4px #000;
+          font-size: 2.5rem;
+          margin-bottom: 2rem;
+          border-bottom: 3px solid #e10600;
+          display: inline-block;
+          padding-bottom: 0.5rem;
+        "
+      >
+        ⭐ Rate Your Experience
+      </h2>
+
+      <div
+        class="stars"
+        style="
+          font-size: 3rem;
+          cursor: pointer;
+          margin: 1.5rem 0;
+          filter: drop-shadow(0 0 8px #ffd700);
+        "
+      >
+        <span
+          class="star"
+          style="
+            color: #ccc;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 0.2rem;
+            text-shadow: 0 0 10px currentColor;
+          "
+          >★</span
+        >
+        <span
+          class="star"
+          style="
+            color: #ccc;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 0.2rem;
+            text-shadow: 0 0 10px currentColor;
+          "
+          >★</span
+        >
+        <span
+          class="star"
+          style="
+            color: #ccc;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 0.2rem;
+            text-shadow: 0 0 10px currentColor;
+          "
+          >★</span
+        >
+        <span
+          class="star"
+          style="
+            color: #ccc;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 0.2rem;
+            text-shadow: 0 0 10px currentColor;
+          "
+          >★</span
+        >
+        <span
+          class="star"
+          style="
+            color: #ccc;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin: 0 0.2rem;
+            text-shadow: 0 0 10px currentColor;
+          "
+          >★</span
+        >
+      </div>
+
+      <p
+        id="rating-text"
+        style="
+          color: #ffffff;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-shadow: 2px 2px 4px #000;
+        "
+      >
+        Click a star to rate!
+      </p>
+
+      <button
+        id="theme-toggle"
+        class="btn"
+        style="
+          margin-top: 2rem;
+          background: linear-gradient(145deg, #e10600, #a00400);
+          color: #ffffff;
+          border: 2px solid #ffffff;
+          padding: 1rem 2rem;
+          font-size: 1.1rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(225, 6, 0, 0.6);
+          border-radius: 5px;
+        "
+      >
+        🌗 Switch to Night
+      </button>
+
+      <div
+        style="
+          margin-top: 2rem;
+          background: rgba(0, 0, 0, 0.6);
+          padding: 2rem;
+          border-radius: 10px;
+          border: 2px solid #e10600;
+          box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
+        "
+      >
+        <input
+          type="text"
+          id="name-input"
+          placeholder="Enter your name"
+          class="form-control"
+          style="
+            max-width: 300px;
+            margin: auto;
+            padding: 0.8rem;
+            background: #1a1a1a;
+            border: 2px solid #e10600;
+            color: #ffffff;
+            font-size: 1rem;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+          "
+        />
+        <button
+          id="greet-btn"
+          class="btn"
+          style="
+            margin-top: 1rem;
+            background: linear-gradient(145deg, #ffffff, #cccccc);
+            color: #000000;
+            border: 2px solid #e10600;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+          "
+        >
+          Say Hello
+        </button>
+        <p
+          id="greeting"
+          style="
+            margin-top: 1rem;
+            color: #ffd700;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px #ffd700, 2px 2px 4px #000;
+          "
+        ></p>
+      </div>
+
+      <div
+        style="
+          margin-top: 2rem;
+          background: rgba(0, 0, 0, 0.6);
+          padding: 2rem;
+          border-radius: 10px;
+          border: 2px solid #e10600;
+          box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
+        "
+      >
+        <button
+          id="show-quote"
+          class="btn"
+          style="
+            background: linear-gradient(145deg, #e10600, #a00400);
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(225, 6, 0, 0.6);
+            border-radius: 5px;
+          "
+        >
+          💬 Show Random Quote
+        </button>
+        <p
+          id="quote-area"
+          style="
+            margin-top: 1rem;
+            font-style: italic;
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-shadow: 2px 2px 4px #000;
+            line-height: 1.6;
+            transition: transform 0.3s ease;
+          "
+        ></p>
+      </div>
+
+      <button
+        id="Russell"
+        class="btn"
+        style="
+          margin-top: 2rem;
+          background: linear-gradient(145deg, #e10600, #a00400);
+          color: #ffffff;
+          border: 2px solid #ffffff;
+          padding: 1rem 2rem;
+          font-size: 1.1rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(225, 6, 0, 0.6);
+          border-radius: 5px;
+        "
+      >
+        Click to hear George Bin Russell
+      </button>
+      <video id="russellVideo" width="300" style="display: none; margin: auto; margin-top: 1rem" controls>
+        <source
+          src="/assets/russell.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <img
+        src="/assets/george_bin.webp"
+        id="russell_bin"
+        alt="george"
+        style="display: block; margin-left: 340px; display: none"
+      />
     </section>
 
     <!-- === Footer === -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
-          <img
-            src="/assets/logo1.png"
-            alt="Logo"
-            class="footer-logo"
-          />
+          <img src="/assets/logo1.png" alt="Logo" class="footer-logo" />
           <h3 class="footer-title">Contact Us</h3>
           <p class="footer-phone">+7 777 777 77 77</p>
           <p class="footer-time">from 9:00 am to 8:00 pm</p>
@@ -469,19 +764,19 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
       // Simple countdown timer animation
       function updateCountdown() {
-        const daysEl = document.getElementById('days');
-        const hoursEl = document.getElementById('hours');
-        const minutesEl = document.getElementById('minutes');
-        
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minutesEl = document.getElementById("minutes");
+
         setInterval(() => {
           let minutes = parseInt(minutesEl.textContent);
           let hours = parseInt(hoursEl.textContent);
           let days = parseInt(daysEl.textContent);
-          
+
           minutes--;
           if (minutes < 0) {
             minutes = 59;
@@ -496,14 +791,16 @@
             hours = 0;
             minutes = 0;
           }
-          
-          daysEl.textContent = String(days).padStart(2, '0');
-          hoursEl.textContent = String(hours).padStart(2, '0');
-          minutesEl.textContent = String(minutes).padStart(2, '0');
+
+          daysEl.textContent = String(days).padStart(2, "0");
+          hoursEl.textContent = String(hours).padStart(2, "0");
+          minutesEl.textContent = String(minutes).padStart(2, "0");
         }, 60000); // Update every minute
       }
-      
+
       updateCountdown();
     </script>
+
+    <script src="../../scripts/dubai.js"></script>
   </body>
 </html>
