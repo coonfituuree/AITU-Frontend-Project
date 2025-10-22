@@ -1,6 +1,6 @@
 "use strict";
 
-// 🌗 Theme Switch
+//Theme Switch
 const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("night-theme");
@@ -13,7 +13,7 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
-// ⏰ Time-Based Greeting
+//  Time-Based Greeting
 function timeGreeting() {
   const hour = new Date().getHours();
   const greetingElement = document.getElementById("timeGreeting");
@@ -27,7 +27,7 @@ function timeGreeting() {
 }
 timeGreeting();
 
-// 🧍Dynamic Name Greeting
+// Dynamic Name Greeting
 const greetForm = document.getElementById("greetForm");
 const nameInput = document.getElementById("nameInput");
 const userGreeting = document.getElementById("userGreeting");
@@ -38,14 +38,14 @@ greetForm.addEventListener("submit", (e) => {
   if (name) userGreeting.textContent = `Hello, ${name}! 👋`;
 });
 
-// 🔄 Reset Button
+//  Reset Button
 const resetBtn = document.getElementById("resetBtn");
 resetBtn.addEventListener("click", () => {
   document.querySelectorAll("input").forEach((input) => (input.value = ""));
   userGreeting.textContent = "Welcome!";
 });
 
-// 🎹 Keyboard Navigation
+//  Keyboard Navigation
 const navLinks = document.querySelectorAll(".nav a");
 let focusedIndex = 0;
 
@@ -59,7 +59,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// ✉️ Async Contact Form (using fetch)
+//  Async Contact Form (using fetch)
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 
