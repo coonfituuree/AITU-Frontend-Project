@@ -1,71 +1,126 @@
 "use strict";
+      console.log("✅ JS loaded");
 
-// === Task 1: Form Validation ===
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+      // === 1. Таймер (обновляется каждую секунду)
+      const datetime = document.getElementById("datetime");
+      function updateTime() {
+        const now = new Date();
+        datetime.textContent = now.toLocaleString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        });
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
+      // === 2. Show Time
+      document.getElementById("showTimeBtn").onclick = () =>
+        alert("🕒 Current time: " + new Date().toLocaleTimeString());
 
-  if (name === "" || email === "" || message === "") {
-    alert("⚠️ Please fill in all fields.");
-    return;
-  }
+      // === 3. Change Background
+      document.getElementById("colorBtn").onclick = () => {
+        const colors = ["#F97316", "#3B82F6", "#10B981", "#F43F5E", "#8B5CF6"];
+        document.body.style.backgroundColor =
+          colors[Math.floor(Math.random() * colors.length)];
+      };
 
-  if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
-    alert("❌ Please enter a valid email address.");
-    return;
-  }
+      // === 4. Day/Night Mode
+      document.getElementById("modeBtn").onclick = () => {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        modeBtn.textContent = isDark ? "☀️ Day Mode" : "🌙 Night Mode";
+      };
 
-  alert("✅ Thank you, " + name + "! Your message has been sent.");
-  this.reset();
-});
+      // === ✅ GALLERY с эффектом fade-in ===
+const mainImage = document.getElementById("mainImage");
+const thumbs = document.querySelectorAll(".gallery-thumbs img");
 
-// === Task 2: Accordion ===
-const questions = document.querySelectorAll(".accordion-question");
+thumbs.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    // добавляем fade-out эффект
+    mainImage.classList.add("fade-out");
 
-questions.forEach((q) => {
-  q.addEventListener("click", () => {
-    const ans = q.nextElementSibling;
-    ans.style.display = ans.style.display === "block" ? "none" : "block";
+    // ждём 300мс, потом меняем картинку
+    setTimeout(() => {
+      mainImage.src = thumb.src;
+
+      // после замены плавно возвращаем прозрачность
+      mainImage.classList.remove("fade-out");
+    }, 300);
   });
 });
 
-// === Task 3: Popup Form ===
-const popup = document.getElementById("popup");
-const openPopup = document.getElementById("openPopup");
-const closePopup = document.getElementById("closePopup");
+  // === ✅ ASYNC FORM через fetch() ===
+  const successMsg = document.createElement("p");
+  successMsg.textContent = "✅ Message sent successfully!";
+  successMsg.style.color = "#16a34a";
+  successMsg.style.fontWeight = "600";
+  successMsg.style.display = "none";
+  document.getElementById("contactForm").appendChild(successMsg);
 
-openPopup.onclick = () => (popup.style.display = "block");
-closePopup.onclick = () => (popup.style.display = "none");
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = {
+      name: document.getElementById("name").value.trim(),
+      email: document.getElementById("email").value.trim(),
+      message: document.getElementById("message").value.trim(),
+    };
 
-window.onclick = (e) => {
-  if (e.target === popup) popup.style.display = "none";
-};
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("⚠️ Please fill in all fields.");
+      return;
+    }
 
-// === Task 4: Change Background Color ===
-document.getElementById("colorBtn").addEventListener("click", () => {
-  const colors = ["#F97316", "#3B82F6", "#10B981", "#F43F5E", "#8B5CF6"];
-  const random = colors[Math.floor(Math.random() * colors.length)];
-  document.body.style.backgroundColor = random;
-});
+    try {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-// === Task 5: Display Current Date and Time ===
-function updateTime() {
-  const now = new Date();
-  const options = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  };
-  document.getElementById("datetime").textContent = now.toLocaleString(
-    "en-US",
-    options
-  );
-}
+      if (res.ok) {
+        successMsg.style.display = "block";
+        contactForm.reset();
+        setTimeout(() => (successMsg.style.display = "none"), 3000);
+      } else {
+        alert("❌ Error sending message.");
+      }
+    } catch (err) {
+      alert("⚠️ Network error.");
+    }
+  });
+      // === 6. Form Validation
+      document.getElementById("contactForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = nameInput.value.trim(),
+          email = emailInput.value.trim(),
+          message = messageInput.value.trim();
+        if (!name || !email || !message)
+          return alert("⚠️ Please fill in all fields.");
+        if (!/^[^@]+@[^@]+\.[^@]+$/.test(email))
+          return alert("❌ Invalid email address.");
+        alert("✅ Thank you, " + name + "! Your message has been sent.");
+        e.target.reset();
+      });
 
-setInterval(updateTime, 1000);
-updateTime();
+      // === 7. Accordion
+      document.querySelectorAll(".accordion-question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const ans = q.nextElementSibling;
+          ans.style.display = ans.style.display === "block" ? "none" : "block";
+        });
+      });
+
+      // === 8. Popup
+      const popup = document.getElementById("popup");
+      document.getElementById("openPopup").onclick = () =>
+        (popup.style.display = "block");
+      document.getElementById("closePopup").onclick = () =>
+        (popup.style.display = "none");
+      window.onclick = (e) => {
+        if (e.target === popup) popup.style.display = "none";
+      }
