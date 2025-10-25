@@ -48,6 +48,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   width: 60%;
   margin: 20px;
+ 
 }
 
 .card:hover {
@@ -102,7 +103,7 @@
   }
 }
 
-/* 🌗 THEME STYLES */
+/* THEME STYLES */
 body.day-theme {
   background-color: #f9fafb;
   color: #1e293b;
@@ -134,9 +135,6 @@ body.night-theme {
   gap: 0.5rem;
 }
 
-
-
-
 input,
 textarea {
   padding: 0.5rem;
@@ -148,3 +146,91 @@ textarea {
   margin-top: 0.5rem;
   font-weight: bold;
 }
+
+
+.highlight {
+  background: yellow;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;       
+  width: 0%;         
+  background: linear-gradient(to right, #3B82F6, #8B5CF6, #EC4899);
+  z-index: 9999;
+  border-radius: 0 4px 4px 0; 
+  transition: width 0.15s linear;
+}
+
+/*animated numbers*/
+
+.stats { display:flex; gap:24px; font-weight:700; font-size:28px; }
+.stat  { white-space:nowrap; }
+
+.stats {
+  display: flex;
+  gap: 40px;
+  font-size: 26px;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.counter {
+  font-size: 40px;
+  color: #3b82f6;
+}
+
+#greetToast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #3b82f6;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: none;
+  z-index: 2000;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.copyBtn {
+  position: relative;
+}
+
+.copyBtn:active::after {
+  content: "Copied!";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background: #3b82f6;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.lazy-img {
+  filter: blur(5px);
+  transition: 0.4s;
+}
+
+.lazy-img.loaded {
+  filter: blur(0);
+}
+
+
+
+
+

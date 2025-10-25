@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 
   <body class="day-theme">
@@ -44,6 +45,9 @@
 
 
       <main class="main">
+
+        <div id="scrollProgress"></div>
+
         <button id="themeToggle" class="btn btn-light" >🌞 Day</button>
         
         <!--  Dynamic Greeting -->
@@ -54,23 +58,39 @@
           <button type="submit" class="btn btn-primary">Greet</button>
           <button type="button" id="resetBtn" class="btn btn-danger">Reset</button>
         </form>
+         <!-- Toast for Greeting -->
+        <div id="greetToast"></div>
+       
+
+
+        <!-- Search Form -->
+        <form id="searchForm" style="margin: 20px 0; display:flex; gap:10px;">
+          <input type="text" id="searchBox" class="form-control" placeholder="Search tours...">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+
 
         
 
         <div class="card">
           <img src="../assets/tokyo1.jpg" alt="Tokyo" />
-          <h3>Туры в Токио</h3>
-          <p>Экскурсионные туры из Астаны.</p>
-          <p><b>от 725 099 тг.</b></p>
+          <h3>Tours to Tokyo</h3>
+           <p>Excursion tours from Astana.</p>
+          <p><b>from 725 099 tg.</b></p>
           <div class="discount">-20%</div>
+          <p class="copyText"></p>
+          <button class="copyBtn btn btn-outline-dark">Copy link to tour</button>
         </div>
 
         <div class="card">
-          <img src="../assets/dubai1.jpg" alt="Dubai" />
-          <h3>Туры в Дубай</h3>
-           <p>Экскурсионные туры из Астаны.</p>
-          <p><b>от 400 099 тг.</b></p>
+          <img data-src="../assets/dubai1.jpg" class="lazy-img" alt="Dubai">
+          <h3>Tours to Dubai</h3>
+           <p>Excursion tours from Astana</p>
+          <p><b>from 400 099 tg.</b></p>
           <div class="discount">-10%</div>
+          <p class="copyText"></p>
+          <button class="copyBtn btn btn-outline-dark">Copy link to tour</button>
         </div>
 
        
@@ -91,9 +111,23 @@
             <input type="text" name="name" placeholder="Your Name" required /> <br>
             <input type="email" name="email" placeholder="Your Email" required /> <br>
             <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-success">Send</button>
+            <button type="submit" id="sendBtn" class="btn btn-success">Send</button>
           </form>
           <p id="formStatus"></p>
+
+          <!-- counters ↓ -->
+
+          
+          <div class="stats">
+            <div class="stat">
+              <span class="counter" data-target="12000">0</span> Happy Travelers
+            </div>
+            <div class="stat">
+              <span class="counter" data-target="50">0</span> Countries Offered
+            </div>
+          </div>
+
+         
 
 
       
@@ -140,5 +174,7 @@
       </footer>
     </div>
     <script src="../scripts/tours.js"></script>
+  
+
   </body>
 </html>
