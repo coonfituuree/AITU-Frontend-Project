@@ -161,3 +161,4 @@ document.addEventListener("DOMContentLoaded", function () {
   greetEl.textContent = greetingByTime();
   document.querySelector(".footer").appendChild(greetEl);
 });
+
