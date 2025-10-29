@@ -79,27 +79,27 @@ $(document).ready(function () {
 
     let value = $("#searchBox").val().toLowerCase();
 
-    // Удаляем прошлую подсветку только внутри h3
+    // deleting last light only in h3
     $(".card h3").each(function () {
       $(this).html($(this).text());
     });
 
-    // Фильтрация карточек ТОЛЬКО по h3
+    // filter cards only for h3
     const $cards = $(".card").filter(function () {
       return $(this).find("h3").text().toLowerCase().includes(value);
     });
 
-    // Скрыть все, показать только найденные
+    // hide all except found onces 
     $(".card").hide();
     $cards.show();
 
-    // Если нет совпадений
+    // if no such word 
     if ($cards.length === 0) {
       alert("No such tours ❌");
       return;
     }
 
-    // Подсветка совпавшего слова в h3
+    // highlighting founded word h3
     $cards.each(function () {
       let heading = $(this).find("h3");
       let text = heading.text();
@@ -130,13 +130,13 @@ counters.forEach(counter => {
     const target = +counter.getAttribute('data-target');
     const c = +counter.innerText;
 
-    const increment = target / 150; // скорость: меньше число → медленнее
+    const increment = target / 150; 
 
     if (c < target) {
       counter.innerText = `${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter, 10); // задержка
+      setTimeout(updateCounter, 10); 
     } else {
-      counter.innerText = target; // фиксируем конечное значение
+      counter.innerText = target; 
     }
   };
 
@@ -184,7 +184,7 @@ contactForm.addEventListener("submit", async (e) => {
 
 // task-8: Copy for all items
 $(".copyBtn").on("click", function () {
-  let text = $(this).prev(".copyText").text(); // берём текст перед кнопкой
+  let text = $(this).prev(".copyText").text(); // taking text before button
   navigator.clipboard.writeText(text);
 
   let btn = $(this);
