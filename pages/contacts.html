@@ -1,3 +1,4 @@
+Нурасыл, [29.10.2025 16:14]
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +12,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/contacts.css" />
 
@@ -131,7 +132,8 @@
     </style>
   </head>
 
-  <body>
+Нурасыл, [29.10.2025 16:14]
+<body>
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div class="container">
@@ -209,13 +211,18 @@
      <!-- === GALLERY === -->
 <section class="gallery-container my-5 text-center">
   <h3 class="mb-3">Our Office Gallery</h3>
-  <img id="mainImage" src="../assets/office1.jpg" class="img-fluid rounded shadow" style="max-width:600px;" alt="Main" />
-  
+
+  <!-- главный кадр тоже лениво -->
+  <img id="mainImage"
+       class="img-fluid rounded shadow lazy"
+       src="../assets/office1.jpg"
+       alt="Main" style="max-width:600px;" />
+
   <div class="gallery-thumbs d-flex justify-content-center gap-3 mt-3 flex-wrap">
-    <img src="../assets/office1.jpg" width="100" class="rounded shadow-sm" alt="thumb1" />
-    <img src="../assets/office2.jpg" width="100" class="rounded shadow-sm" alt="thumb2" />
-    <img src="../assets/office3.jpg" width="100" class="rounded shadow-sm" alt="thumb3" />
-    <img src="../assets/office4.jpg" width="100" class="rounded shadow-sm" alt="thumb4" />
+    <img class="rounded shadow-sm lazy" src="../assets/office1.jpg" width="100" alt="thumb1" />
+    <img class="rounded shadow-sm lazy" src="../assets/office2.jpg" width="100" alt="thumb2" />
+    <img class="rounded shadow-sm lazy" src="../assets/office3.jpg" width="100" alt="thumb3" />
+    <img class="rounded shadow-sm lazy" src="../assets/office4.jpg" width="100" alt="thumb4" />
   </div>
 </section>
 
@@ -228,7 +235,8 @@
           We provide tours, hotel booking, and travel planning for individuals and groups.
         </div>
 
-        <div class="accordion-question">Can I cancel or reschedule my booking?</div>
+Нурасыл, [29.10.2025 16:14]
+<div class="accordion-question">Can I cancel or reschedule my booking?</div>
         <div class="accordion-answer">
           Yes, we help with cancellations and rescheduling according to partner policies.
         </div>
@@ -295,7 +303,23 @@
         </div>
       </div>
     </main>
-
+<section class="container text-center my-5">
+  <h3 class="mb-4 fw-bold">Our TravelX Achievements</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h1 class="counter" data-target="1500">0</h1>
+      <p>Happy Clients</p>
+    </div>
+    <div class="col-md-4">
+      <h1 class="counter" data-target="320">0</h1>
+      <p>Hosted Tours</p>
+    </div>
+    <div class="col-md-4">
+      <h1 class="counter" data-target="45">0</h1>
+      <p>Countries Covered</p>
+    </div>
+  </div>
+</section>
     <!-- ===== FOOTER ===== -->
     <footer class="footer bg-light py-4 mt-5">
       <div class="container text-center">
@@ -310,4 +334,4 @@
 <!-- <script defer src="../scripts/contact.js"></script> -->
 
   </body>
-</html
+</html>
